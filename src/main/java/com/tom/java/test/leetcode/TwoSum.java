@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.com/problems/two-sum/">Two Sum</a>
+ * Two Sum. https://leetcode.com/problems/two-sum/
  * There are at least two approaches.
  * <p>
  * #1, using hashmap as extra space, trading space for speed
