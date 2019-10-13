@@ -1,7 +1,7 @@
 package com.tom.java.test.leetcode;
 
 
-public class MergeTwoSortedList {
+public class Problem21 {
 
     public static void main(String[] args) {
 
@@ -13,16 +13,16 @@ public class MergeTwoSortedList {
      * @param l2
      * @return
      */
-    public static ListNode solution1(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
         } else if (l2 == null) {
             return l1;
         } else if (l1.val < l2.val) {
-            l1.next = solution1(l1.next, l2);
+            l1.next = mergeTwoLists1(l1.next, l2);
             return l1;
         } else {
-            l2.next = solution1(l1, l2.next);
+            l2.next = mergeTwoLists1(l1, l2.next);
             return l2;
         }
 
@@ -35,7 +35,7 @@ public class MergeTwoSortedList {
      * @param l2
      * @return
      */
-    public static ListNode solution2(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
 
         ListNode head = new ListNode(-1);
 

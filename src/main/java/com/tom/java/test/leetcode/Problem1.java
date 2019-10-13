@@ -12,14 +12,14 @@ import java.util.Map;
  * <p>
  * #2, using two pointers after sorting the array
  */
-public class TwoSum {
+public class Problem1 {
 
     public static void main(String[] args) {
 
         int[] arr = {3, 5, 7, 2, 1, 6};
 //    int[] arr = {3,5,2,1,6};
         int target = 12;
-        int[] a = solution(arr, target);
+        int[] a = twoSum(arr, target);
         for (int item : a) {
             System.out.println(item);
         }
@@ -27,7 +27,7 @@ public class TwoSum {
     }
 
 
-    public static int[] solution(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);
@@ -39,10 +39,10 @@ public class TwoSum {
                 return new int[]{i, map.get(complement)};
             }
         }
-        throw new IllegalArgumentException("No two sum solution");
+        throw new IllegalArgumentException("No two sum twoSum");
     }
 
-    public static int[] solution2(int[] nums, int target) {
+    public static int[] twoSum2(int[] nums, int target) {
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
         int[] res = new int[2];
         for (int i = 0; i < nums.length; ++i) {
@@ -56,7 +56,7 @@ public class TwoSum {
         return res;
     }
 
-    public static int[] solution3(int[] nums, int target) {
+    public static int[] twoSum3(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
@@ -65,10 +65,10 @@ public class TwoSum {
             }
             map.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution");
+        throw new IllegalArgumentException("No two sum twoSum");
     }
 
-    public static int[] solution4(int[] nums, int target) {
+    public static int[] twoSum4(int[] nums, int target) {
         if (nums == null || nums.length < 2) {
             return null;
         }
