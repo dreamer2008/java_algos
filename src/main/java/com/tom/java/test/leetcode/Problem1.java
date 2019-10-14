@@ -19,7 +19,7 @@ public class Problem1 {
         int[] arr = {3, 5, 7, 2, 1, 6};
 //    int[] arr = {3,5,2,1,6};
         int target = 12;
-        int[] a = twoSum(arr, target);
+        int[] a = twoSum1(arr, target);
         for (int item : a) {
             System.out.println(item);
         }
@@ -27,7 +27,7 @@ public class Problem1 {
     }
 
 
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum1(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);
