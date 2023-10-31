@@ -39,7 +39,7 @@ public class Problem1 {
                 return new int[]{i, map.get(complement)};
             }
         }
-        throw new IllegalArgumentException("No two sum twoSum");
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static int[] twoSum2(int[] nums, int target) {
@@ -65,7 +65,7 @@ public class Problem1 {
             }
             map.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum twoSum");
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static int[] twoSum4(int[] nums, int target) {
